@@ -10,12 +10,20 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welche zwei Zahlen möchtest du addieren?. Wähle jetzt deine erste Zahl.");
-            int Zahl1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Das ist deine erste Zahl. Was ist deine 2.Zahl");
-            int Zahl2 = Convert.ToInt32 (Console.ReadLine());
-            Console.WriteLine(Zahl1 + Zahl2);
+            Console.WriteLine("Schreibe mir einen schönen Text mit möglichst vielen g,G und u,U Buchstaben!");
+                string text = Console.ReadLine();
+            string replaced_text = text.Replace('U', 'G').Replace('u', 'g');
+            Console.WriteLine("Vielen Dank für den Text");
+            Console.WriteLine("Der alte Text war " + text);
+            Console.WriteLine("Und der neue Text ist " + replaced_text);    
+
+
+
+
+
             Console.ReadLine();
+
+
 
 
         }
