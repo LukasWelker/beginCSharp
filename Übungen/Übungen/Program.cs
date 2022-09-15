@@ -11,15 +11,17 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hallo bitte schreibe mir einen Text mit Semikolons!");
+            Console.WriteLine("Schreibe mir bitte einen Text");
             string text = Console.ReadLine();
-            string[] split_text = text.Split(';');
-
-            for (int i = 0; i < split_text.Length; i++)
+            bool contains = text.Contains("abc");
+            if (contains == true)
             {
-                Console.WriteLine(split_text[i]);
+                Console.WriteLine("Ist vorhanden");
             }
-
+            else
+            {
+                Console.WriteLine("ist nicht vorhanden");
+            }
             Console.ReadLine();
         }
     }
