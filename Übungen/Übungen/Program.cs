@@ -13,15 +13,8 @@ namespace Übungen
         {
             Console.WriteLine("Schreibe mir bitte einen Text");
             string text = Console.ReadLine();
-            bool contains = text.Contains("abc");
-            if (contains == true)
-            {
-                Console.WriteLine("Ist vorhanden");
-            }
-            else
-            {
-                Console.WriteLine("ist nicht vorhanden");
-            }
+            Console.WriteLine(text.ToUpper());
+            Console.WriteLine(text.ToLower());
             Console.ReadLine();
         }
     }
