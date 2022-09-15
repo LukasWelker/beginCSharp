@@ -10,9 +10,12 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bitte schreibe mir einen Text");
-            string text = Console.ReadLine();   
-            Console.WriteLine("Die Länge des eingegebenen Textes ist " + text.Length + "!");
+            Console.WriteLine("Bitte nenne mir zwei Fließkommazahlen");
+         double Zahl1 = Convert.ToDouble(Console.ReadLine());
+         double Zahl2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(Zahl1 + Zahl1);
+
+            
             Console.ReadLine();
 
 
