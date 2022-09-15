@@ -11,15 +11,22 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Nenne mir eine Zahl bis maximal 20");
-            int Zahl1 = Convert.ToInt32(Console.ReadLine());
-            for (int i = Zahl1; i >=0; i--)
+            Console.WriteLine("Nenne mir die Namen der Azubis!");
+            string AzubiNamen = Console.ReadLine();
+            string[] split_AzubiNamen = AzubiNamen.Split(',');
+            Console.WriteLine("Nach welchem Buchstaben möchtest du suchen?");
+            string Buchstabe = Console.ReadLine();
+            for(int i = 0; i < split_AzubiNamen.Length; i++)
             {
-                Console.WriteLine(i);
+                if (split_AzubiNamen[i].Contains(Buchstabe))
+                {
+                    Console.WriteLine(split_AzubiNamen[i]);
+                }
+                
             }
-            Console.ReadKey();
-
            
+
+           Console.ReadLine();
         }
     }
 }
