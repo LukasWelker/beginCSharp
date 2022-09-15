@@ -11,22 +11,39 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Nenne mir die Namen der Azubis!");
-            string AzubiNamen = Console.ReadLine();
-            string[] split_AzubiNamen = AzubiNamen.Split(',');
-            Console.WriteLine("Nach welchem Buchstaben möchtest du suchen?");
-            string Buchstabe = Console.ReadLine();
-            for(int i = 0; i < split_AzubiNamen.Length; i++)
-            {
-                if (split_AzubiNamen[i].Contains(Buchstabe))
-                {
-                    Console.WriteLine(split_AzubiNamen[i]);
-                }
-                
-            }
-           
+            Random r = new Random();
+            int random_zahl = r.Next(0, 100);
+            Console.WriteLine("Wähle eine Zahl zwischen 0 und 100");
 
-           Console.ReadLine();
+            int number = Convert.ToInt32(Console.ReadLine());
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (random_zahl < number)
+                    {
+                        Console.WriteLine("Die Zahl ist kleiner");
+                    }
+
+                    else if (random_zahl > number)
+
+                    {
+                        Console.WriteLine("Die Zahl ist größer");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You won!");
+                    }
+                    number = Convert.ToInt32(Console.ReadLine());
+                }
+
+            }
+
+
+
+            Console.WriteLine();
+
+
+
         }
     }
 }
