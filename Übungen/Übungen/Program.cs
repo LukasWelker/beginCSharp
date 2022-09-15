@@ -10,10 +10,13 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            int Zahl1 = 2;
-            int Zahl2 = 3;
+            Console.WriteLine("Welche zwei Zahlen möchtest du addieren?. Wähle jetzt deine erste Zahl.");
+            int Zahl1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Das ist deine erste Zahl. Was ist deine 2.Zahl");
+            int Zahl2 = Convert.ToInt32 (Console.ReadLine());
             Console.WriteLine(Zahl1 + Zahl2);
             Console.ReadLine();
+
 
         }
     }
