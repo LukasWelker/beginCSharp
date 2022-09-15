@@ -11,11 +11,11 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hallo bitte schreibe mir einen Text!");
-            string text = Console.ReadLine();
-        
-            String replaced_text = text.PadRight(30, 'y');
-            Console.WriteLine(replaced_text);
+            Console.WriteLine("Hallo bitte schreibe mir einen Text mit Leerzeichen vor und nach dem Text!");
+            string text = Console.ReadLine() ;
+            string trimmed_text = text.Trim(' ');
+            Console.WriteLine(trimmed_text);
+            
 
 
             
