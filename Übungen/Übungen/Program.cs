@@ -11,19 +11,16 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hallo bitte schreibe mir einen Text mit Leerzeichen vor und nach dem Text!");
-            string text = Console.ReadLine() ;
-            string trimmed_text = text.Trim(' ');
-            Console.WriteLine(trimmed_text);
-            
+            Console.WriteLine("Hallo bitte schreibe mir einen Text mit Semikolons!");
+            string text = Console.ReadLine();
+            string[] split_text = text.Split(';');
 
+            for (int i = 0; i < split_text.Length; i++)
+            {
+                Console.WriteLine(split_text[i]);
+            }
 
-            
             Console.ReadLine();
-
-
-
-
         }
     }
 }
