@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,10 +11,11 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Schreibe mir bitte einen Text");
-            string entry = Console.ReadLine(); 
-            string replaced_entry = entry.PadLeft(20, 'y');
-            Console.WriteLine(replaced_entry);
+            Console.WriteLine("Hallo bitte schreibe mir einen Text!");
+            string text = Console.ReadLine();
+        
+            String replaced_text = text.PadRight(30, 'y');
+            Console.WriteLine(replaced_text);
 
 
             
