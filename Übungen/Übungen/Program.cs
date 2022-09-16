@@ -62,7 +62,8 @@ namespace Übungen
                 Console.WriteLine(numbers[i]);
             }
 
-
+            //Aufgabe 11 ----> Lösche alle Zahlen größer als 80 aus der Liste
+            numbers.RemoveAll(x => x < 80);
 
 
 
