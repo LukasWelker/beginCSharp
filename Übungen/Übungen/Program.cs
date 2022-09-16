@@ -11,22 +11,20 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            string[] namen = new string[13];
+            Console.WriteLine("Wie viele Einträge möchtest du in deinem Array eintragen?");
+            int user_entries = Convert.ToInt32(Console.ReadLine());
+            int[] zahlen = new int[user_entries];
 
-            string[] namen2 = new string[]
+            //Startvariable/Laufzeit/Zählvariable
+            for (int i = 0; i < user_entries; i++)
             {
-                 "Lukas", "Jonas", "Mona", "Marie","hilipp", "Erwin",
-                "Leon", "Marcello", "JOhannes", "Robin"
-            };
-            for (int i = 0; i< namen2.Length; i++)
-            {
-                namen2[i] += " 123";
+                Console.WriteLine("Gebe mir die erste Zahl deines Arrays an!");
+                zahlen[i] = Convert.ToInt32(Console.ReadLine());
             }
-                
-            //foreach (string trainee in namen2)
-            //{
-            //    Console.WriteLine(trainee);
-            //}
+            for (int i = 0; i < zahlen.Length; i++)
+            {
+                Console.WriteLine(zahlen[i]);   
+            }
             Console.ReadLine();
         }
     }
