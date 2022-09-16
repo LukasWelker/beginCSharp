@@ -23,7 +23,7 @@ namespace Übungen
                 zahlen[i] = Convert.ToInt32(Console.ReadLine());
 
             }
-            for (int i = 0; i < zahlen2.Length; i++)
+            for (int i = 0; i < zahlen.Length; i++)
             {
                 Console.WriteLine(zahlen[i]);
             }
