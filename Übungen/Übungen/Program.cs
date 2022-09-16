@@ -13,7 +13,8 @@ namespace Übungen
         {
 
             Console.WriteLine("Wir Spielen ein Fizz-Buzz-Spiel zwischen den Zahlen 1 bis 100!");
-            for (int i = 0; i < 101; i--)
+            //Startbvariabel/Laufzeitbedinung/Zählvariable
+            for (int i = 0; i <=550; i++)
             {
                 if (i % 3==0 && i % 5 == 0)
                 {
