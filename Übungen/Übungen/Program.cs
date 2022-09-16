@@ -11,26 +11,34 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Wir bauen nun einen Taschenrechner gib mir nun deine erste Zahlen an");
 
-            string zahl = Console.ReadLine();
-
-           
-
-            switch (zahl)
+            double zahl1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Vielen Dank, jetzt fehlt nur noch die zweite");
+            double zahl2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Danke!");
+            Console.WriteLine("Jetzt fehlr nur noch welche Recheoperation durchgeführt werden soll!");
+            string rechenoperation = Console.ReadLine();
+            double result  = 0;  
+            switch (rechenoperation)
             {
-                case "1":
-                    Console.WriteLine("Die Zahl ist 1");
+                case "+":
+                    result = zahl1 + zahl2;
                     break;
-                case "2":
-                    Console.WriteLine("Die Zahl ist 2");
-                    break ;
-                case "5": Console.WriteLine("Die Zahl ist 5");
+                case "-":
+                   result = zahl1 - zahl2;
                     break;
-                default:
-                    Console.WriteLine("Kein Fall tritt ein");
+                case "/":
+                     result = zahl1 / zahl2;
                     break;
+                case "*":
+                    result = zahl1 * zahl2;
+                    break;
+
             }
-            
+
+            Console.WriteLine(zahl1 + rechenoperation + zahl2 + "=" + result);
+
             Console.ReadLine();
         }
     }
