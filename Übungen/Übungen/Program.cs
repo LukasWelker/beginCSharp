@@ -11,39 +11,25 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-            int random_zahl = r.Next(0, 100);
-            Console.WriteLine("Wähle eine Zahl zwischen 0 und 100");
+            //Array hat Platz für 5 Werte
+            int[] zahlen = new int[5];
 
-            int number = Convert.ToInt32(Console.ReadLine());
+            //Array [26/ 8 /12 / 3 / 6]
+            int[] zahlen2 = new int[] { 26, 8, 12, 3, 6};
+
+            for (int i = 0; i < zahlen.Length; i++)
             {
-                for (int i = 0; i < 10; i++)
-                {
-                    if (random_zahl < number)
-                    {
-                        Console.WriteLine("Die Zahl ist kleiner");
-                    }
-
-                    else if (random_zahl > number)
-
-                    {
-                        Console.WriteLine("Die Zahl ist größer");
-                    }
-                    else
-                    {
-                        Console.WriteLine("You won!");
-                    }
-                    number = Convert.ToInt32(Console.ReadLine());
-                }
+                Console.WriteLine("Gebe mir eine Zahle für das Array");
+                zahlen[i] = Convert.ToInt32(Console.ReadLine());
 
             }
+            for (int i = 0; i < zahlen2.Length; i++)
+            {
+                Console.WriteLine(zahlen[i]);
+            }
+          
 
-
-
-            Console.WriteLine();
-
-
-
+            Console.ReadLine();
         }
     }
 }
