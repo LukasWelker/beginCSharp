@@ -11,14 +11,21 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            //Liste ist eine Klasse 
-            List<int> numbers = new List<int>();
+            Console.WriteLine("Wie viele Namen möchtest du zu deiner Liste hinzufügen?");
+            int eingabe = Convert.ToInt32(Console.ReadLine());
 
-            List<string> name = new List<string>();
-            name.Add("Lukas");
-            name.Add(Console.ReadLine());
-            numbers = new List<int>();
-
+            Console.WriteLine("Vielen Dank!");
+            Console.WriteLine($"Nenne mir nun die {eingabe} , die du zu deiner Liste hinzufügen möchtest!");
+           List<string> name = new List<string>();
+     
+            for (int i = 0; i < eingabe; i++)
+            {
+                name.Add(Console.ReadLine());
+            }
+            for     (int i = 0; i < eingabe; i++)
+            {
+                Console.WriteLine(name[i]);
+            }
 
             Console.ReadLine();
         }
