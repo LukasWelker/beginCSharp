@@ -14,17 +14,35 @@ namespace Übungen
 
 
             Console.WriteLine("Wir holen uns jetzt eine Zahl aus Number()");
-            int zahl = Number();
-            Console.WriteLine(zahl);
+
+            int zahl1 = 5;
+            int zahl2 = 120;
+            int ergebnis = Add(zahl1, zahl2);
+            Console.WriteLine(ergebnis);
+
             Console.ReadLine();
             
         }
-
-
-        static int Number()
+        static int Add(int z1, int z2)
         {
-            return 144;
-            return 124;
+            int summe = z1 + z2;
+            return summe;
+        }
+
+
+
+
+
+
+
+        //static Rückgabetyp MethodenName (Parameter)
+        static List <string> Number()
+        { 
+            List<string> name = new List<string>();
+            name.Add("ABC");
+            //Rückgabevariabel
+            return name;
+            
         }
     }
 
