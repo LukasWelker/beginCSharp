@@ -11,62 +11,67 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-
-
-            Console.WriteLine("Wähle deine erste Zahl");
-
-            int zahl1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Vielen Dank, nun fehlt noch die zweite Zahl!");
-            int zahl2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("jetzt fehlt noch der Rechenoperator!");
-            string operators = Console.ReadLine();
-            int result = 0;
-            switch (operators)
-            {
-                case "+":
-                    result = Add(zahl1, zahl2);
-                    break; 
-                case "-":
-                    result = subtrahieren(zahl1, zahl2);
-                    break;
-                case "/":
-                    result = division(zahl1, zahl2);
-                    break;
-                case "*":
-                    result = multiply(zahl1, zahl2);
-                    break;
-                default:
-                    Console.WriteLine("Parameter gibt es nicht!");
-                    break;
-
-
-            }
-            Console.WriteLine($"Dein Ergebnis ist {result}");
-            Console.ReadLine();    
+            //Aufgabe 1
+            List<int> numbers = new List<int>() { 5, 3, 7 };
             
-        }
-        static int Add(int z1, int z2)
-        {
-            int summe = z1 + z2;
-            return summe;
-        }
-        static int multiply(int z1, int z2)
-        {
-            int summe = z1 * z2;
-            return summe;
-        }
-        static int division(int z1, int z2)
-        {
-            int summe = z1 / z2;
-            return summe;
-        }
-        static int subtrahieren(int z1, int z2)
-        {
-            int summe = z1 - z2;
-            return summe;
+            //Aufgabe2
+                numbers.Add(1);
+          
+            //Aufgabe 3
+            while (true) 
+            { 
+
+                Console.WriteLine("Gib mir eine Zahl");
+                string eingabe2 = Console.ReadLine();
+                if (eingabe2 == string.Empty)
+                {
+                    break;
+                }
+                int eingabe = Convert.ToInt32(eingabe2);
+
+                numbers.Add(eingabe);
+            }
+
+            //Aufgabe 4
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                //Eckige Klamme, um den Inhalt meiner Liste zu zeigen
+                Console.WriteLine(numbers[i]);
+            }
+                
+            //Aufgabe 5
+            numbers.Insert(1, 99);
+
+            //Aufgabe 6
+            numbers.AddRange(new List<int>() { 92, 93, 94});
+
+
+            //Aufgabe7
+            numbers.RemoveAt(1);
+
+            //Aufgabe 8
+            numbers.Remove(99);
+
+            //Aufgabe 9
+            numbers.RemoveAt(numbers.Count - 1);
+
+            //Aufgabe 10
+
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+
+
+
+
+            Console.ReadLine();
 
         }
         
     }
 
 }
+
+// While
