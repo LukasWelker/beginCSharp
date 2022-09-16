@@ -11,33 +11,14 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wir bauen nun einen Taschenrechner gib mir nun deine erste Zahlen an");
+            //Liste ist eine Klasse 
+            List<int> numbers = new List<int>();
 
-            double zahl1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Vielen Dank, jetzt fehlt nur noch die zweite");
-            double zahl2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Danke!");
-            Console.WriteLine("Jetzt fehlr nur noch welche Recheoperation durchgeführt werden soll!");
-            string rechenoperation = Console.ReadLine();
-            double result  = 0;  
-            switch (rechenoperation)
-            {
-                case "+":
-                    result = zahl1 + zahl2;
-                    break;
-                case "-":
-                   result = zahl1 - zahl2;
-                    break;
-                case "/":
-                     result = zahl1 / zahl2;
-                    break;
-                case "*":
-                    result = zahl1 * zahl2;
-                    break;
+            List<string> name = new List<string>();
+            name.Add("Lukas");
+            name.Add(Console.ReadLine());
+            numbers = new List<int>();
 
-            }
-
-            Console.WriteLine(zahl1 + rechenoperation + zahl2 + "=" + result);
 
             Console.ReadLine();
         }
