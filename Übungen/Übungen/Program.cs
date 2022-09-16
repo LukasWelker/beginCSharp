@@ -13,14 +13,36 @@ namespace Übungen
         {
 
 
-            Console.WriteLine("Wir holen uns jetzt eine Zahl aus Number()");
+            Console.WriteLine("Wähle deine erste Zahl");
 
-            int zahl1 = 5;
-            int zahl2 = 120;
-            int ergebnis = Add(zahl1, zahl2);
-            Console.WriteLine(ergebnis);
+            int zahl1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Vielen Dank, nun fehlt noch die zweite Zahl!");
+            int zahl2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("jetzt fehlt noch der Rechenoperator!");
+            string operators = Console.ReadLine();
+            int result = 0;
+            switch (operators)
+            {
+                case "+":
+                    result = Add(zahl1, zahl2);
+                    break; 
+                case "-":
+                    result = subtrahieren(zahl1, zahl2);
+                    break;
+                case "/":
+                    result = division(zahl1, zahl2);
+                    break;
+                case "*":
+                    result = multiply(zahl1, zahl2);
+                    break;
+                default:
+                    Console.WriteLine("Parameter gibt es nicht!");
+                    break;
 
-            Console.ReadLine();
+
+            }
+            Console.WriteLine($"Dein Ergebnis ist {result}");
+            Console.ReadLine();    
             
         }
         static int Add(int z1, int z2)
@@ -28,22 +50,23 @@ namespace Übungen
             int summe = z1 + z2;
             return summe;
         }
-
-
-
-
-
-
-
-        //static Rückgabetyp MethodenName (Parameter)
-        static List <string> Number()
-        { 
-            List<string> name = new List<string>();
-            name.Add("ABC");
-            //Rückgabevariabel
-            return name;
-            
+        static int multiply(int z1, int z2)
+        {
+            int summe = z1 * z2;
+            return summe;
         }
+        static int division(int z1, int z2)
+        {
+            int summe = z1 / z2;
+            return summe;
+        }
+        static int subtrahieren(int z1, int z2)
+        {
+            int summe = z1 - z2;
+            return summe;
+
+        }
+        
     }
 
 }
