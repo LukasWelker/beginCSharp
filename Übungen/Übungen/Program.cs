@@ -11,24 +11,22 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            //Array hat Platz für 5 Werte
-            int[] zahlen = new int[5];
+            string[] namen = new string[13];
 
-            //Array [26/ 8 /12 / 3 / 6]
-            int[] zahlen2 = new int[] { 26, 8, 12, 3, 6};
-
-            for (int i = 0; i < zahlen.Length; i++)
+            string[] namen2 = new string[]
             {
-                Console.WriteLine("Gebe mir eine Zahle für das Array");
-                zahlen[i] = Convert.ToInt32(Console.ReadLine());
-
-            }
-            for (int i = 0; i < zahlen.Length; i++)
+                 "Lukas", "Jonas", "Mona", "Marie","hilipp", "Erwin",
+                "Leon", "Marcello", "JOhannes", "Robin"
+            };
+            for (int i = 0; i< namen2.Length; i++)
             {
-                Console.WriteLine(zahlen[i]);
+                namen2[i] += " 123";
             }
-          
-
+                
+            //foreach (string trainee in namen2)
+            //{
+            //    Console.WriteLine(trainee);
+            //}
             Console.ReadLine();
         }
     }
