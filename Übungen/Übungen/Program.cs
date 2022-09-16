@@ -12,26 +12,23 @@ namespace Übungen
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Wir Spielen ein Fizz-Buzz-Spiel zwischen den Zahlen 1 bis 100!");
-            //Startbvariabel/Laufzeitbedinung/Zählvariable
-            for (int i = 0; i <=550; i++)
+            string zahl = Console.ReadLine();
+
+           
+
+            switch (zahl)
             {
-                if (i % 3==0 && i % 5 == 0)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (i % 3 == 0)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                 else if (i % 5 == 0){
-                    Console.WriteLine("Buzz");
-                }
-                else 
-                { 
-                        
-                    Console.WriteLine(i);
-                }
+                case "1":
+                    Console.WriteLine("Die Zahl ist 1");
+                    break;
+                case "2":
+                    Console.WriteLine("Die Zahl ist 2");
+                    break ;
+                case "5": Console.WriteLine("Die Zahl ist 5");
+                    break;
+                default:
+                    Console.WriteLine("Kein Fall tritt ein");
+                    break;
             }
             
             Console.ReadLine();
