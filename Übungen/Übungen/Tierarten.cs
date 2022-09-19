@@ -23,23 +23,29 @@ namespace Übungen
         //Im Zweifel immer public void
         public void Printinfo()
         {
+            
+        }
+        //
+        public override string ToString()
+        {
             // == bedeutet ist so / = bedeutet ist nicht so
             if (Fiel == false)
             {
-                Console.WriteLine($"Das {this.GetType().Name} heißt {this.Name} und ist so viele Jahre alt {this.Age}, ausßerdem " +
-                                    $"ist so groß {this.Height} cm lebt bis zu {this.Lifespan} Jahre es wiegt so viel {Weight} kilo");
+               return $"Das {this.GetType().Name} heißt {this.Name} und ist so viele Jahre alt {this.Age}, ausßerdem " +
+                                    $"ist so groß {this.Height} cm lebt bis zu {this.Lifespan} Jahre es wiegt so viel {Weight} kilo";
             }
-            else 
+            else
             {
-                Console.WriteLine($"Das {this.GetType().Name} heißt {this.Name} und ist so viele Jahre alt {this.Age}, ausßerdem " +
-                                   $"ist so groß {this.Height} cm lebt bis zu {this.Lifespan} Jahre es wiegt so viel {Weight} kilo und hat Fell");
+                return $"Das {this.GetType().Name} heißt {this.Name} und ist so viele Jahre alt {this.Age}, ausßerdem " +
+                                   $"ist so groß {this.Height} cm lebt bis zu {this.Lifespan} Jahre es wiegt so viel {Weight} kilo und hat Fell";
             }
+            
         }
-                
 
-        
 
-      
+
+
+
 
 
     }
