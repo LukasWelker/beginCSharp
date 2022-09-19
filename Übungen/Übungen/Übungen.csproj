@@ -49,9 +49,13 @@
     <Compile Include="Dreieck1.cs" />
     <Compile Include="Geometry.cs" />
     <Compile Include="Motorcycle.cs" />
+    <Compile Include="owl.cs" />
+    <Compile Include="Penguin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rechteck.cs" />
+    <Compile Include="Shark.cs" />
+    <Compile Include="Tierarten.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
