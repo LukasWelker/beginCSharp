@@ -11,29 +11,35 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("How many cars would u like to add");
-
+            Console.WriteLine("Hello how many houses you would like to add?");
             int amount = Convert.ToInt32(Console.ReadLine());
-            List<Car> cars = new List<Car>();
-            for (int i = 0; i < amount; i++)
+            List<Haus> Haeuser = new List<Haus>();
+            double QM = 0;
+            for(int i = 0; i < amount; i++)
             {
-                
-                cars.Add(Car.Ask_UserforCar());
-            }
-           
-            
-            foreach (Car car in cars)
-            {
-                //
-                car.PrintCarInformation();
+                Haeuser.Add(Haus.AskForUsersHouse());
             }
 
-
+            foreach (Haus haus in Haeuser)
+            {
+                haus.PrintHausInformation();
+                double summe1 = haus.Hauswohnfläche();
+                double summe2 = haus.GründstückQM();
+                Console.WriteLine($"Deine Hausfläche beträgt {summe1}");
+                Console.WriteLine($"Deine Grundstückfläche beträgt {summe2}");
+                QM = summe1 + summe2;
+                Console.WriteLine($"Deine gesamte Gründtsückfläche beträgt {QM}");
+            }
 
             
-           
+
             
-            Console.ReadLine();
+            
+            
+
+            
+           Console.ReadLine();
+
         }
 
         

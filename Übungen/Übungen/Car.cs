@@ -6,69 +6,93 @@ using System.Threading.Tasks;
 
 namespace Übungen
 {
-    public class Car
+    public class Haus
     {
-        //Attribute
-        public int TypeId { get; set; }
-        public string Make { get; set; }
-        public string Model { get; set; }
-        public int CCM { get; set; }
-        public string Color { get; set; }
-        public string TypeName { get; set; }
-        public int Tyres { get; set; }
+        //Properties
+        public double Length_House { get; set; }
+        public double Wide_house { get; set; }
+        public double Height { get; set; }
+        public string Rooftype { get; set; }
+        public string Putzfarbe { get; set; }
+        public int Floors { get; set; }
+        public int Price { get; set; }
+        public double Length_property { get; set; }
+        public double Wide_proverty { get; set; }
 
-
-        //Konstruktor besondere Art von Methode zum Erzeugen
-        public Car(int typeId, string make, string model, string typeName, int ccm, string color, int Tyre)
+        public Haus( double length_House, double wide_house, double height, string rooftype, string putzfarbe, int floors,
+             int price,  double length_property, double wide_proverty)
         {
-            TypeId = typeId;
-            Make = make;
-            Model = model;
-            TypeName = typeName;
-            CCM = ccm;
-            Color = color;
-            Tyres = Tyre;
+            Length_House = length_House;
+            Wide_house = wide_house;
+            Height = height;
+            Rooftype = rooftype;
+            Putzfarbe = putzfarbe;
+            Floors = floors;
+            Price = price;
+            Length_property = length_property;
+            Wide_proverty = wide_proverty;
+
+        } 
+        public Haus()
+        {
 
         }
-        public Car()
-
+        
+        public static Haus AskForUsersHouse()
         {
+            Haus haus = new Haus();
+            Console.WriteLine("Wie lang soll ihr Haus sein?");
+            haus.Length_House = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Wie breit soll ihr Haus sein?");
+            haus.Wide_house = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Wie hoch soll ihr Haus sein?");
+            haus.Height = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Was für eine Dachart soll ihr Haus haben?");
+            haus.Rooftype = Console.ReadLine();
+
+            Console.WriteLine("Was für eine Putzfarbe soll ihr Haus haben?");
+            haus.Putzfarbe = Console.ReadLine();
+
+            Console.WriteLine("Wie viele etagen soll ihr Haus haben?");
+            haus.Floors = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Wie viel soll ihr haus kosten?");
+            haus.Price = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Wie lang soll das gesamte Grünstück sein inclusive Garten etc. ?");
+            haus.Length_property = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Wie breit soll das gesamte Gründtsück inclusive Garten etc. sein ?");
+            haus.Wide_proverty = Convert.ToDouble(Console.ReadLine());
+            return haus;
 
         }
-
-        //METHODEN
-        public static Car Ask_UserforCar()
+        public double GründstückQM()
         {
-            Car car = new Car();
-            Console.WriteLine("Was für ein Auto möchtest du haben(IdNummer)");
-            car.TypeId = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Was für eine Automarke möchten sie haben");
-            car.Make = Console.ReadLine();
-
-            Console.WriteLine("Was für ein konkretes Model möchten sie?");
-            car.Model = Console.ReadLine();
-
-            Console.WriteLine("Was genau ist der Typename");
-            car.TypeName = Console.ReadLine();
-
-            Console.WriteLine("Wie viel Hubraum soll das Auto haben?");
-            car.CCM = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Welche Farbe soll das Auto haben");
-            car.Color = Console.ReadLine();
-
-            Console.WriteLine("Wie viele Räder soll das Auto haben?");
-            car.Tyres = Convert.ToInt32(Console.ReadLine());
-            return car;
+            double summe1 = Length_House * Wide_house;
+            return summe1;
         }
-        public void PrintCarInformation()
+        public double Hauswohnfläche()
         {
-            Console.WriteLine($"Mein Fahrzeug ist ein  {Make}  {Model} {TypeName} mit einem Hubraum von {CCM} in der Farbe {Color} mit {Tyres} Reifen");
+            double summe2 = Length_House * Wide_house * Floors;
+            return summe2;
         }
 
+        public void PrintHausInformation()
+        {
+            Console.WriteLine($"Mein Haus  {Length_House} lang , {Wide_house} breit, {Height} hoch und hat folgende Dachart: {Rooftype}, es ist verputzt in dieser Farbe {Putzfarbe}," +
+                $"hat diese Anzahl an Etagen {Floors}, kostet {Price} Euro und das Grünstückd ist {Length_property} lang und {Wide_proverty} breit");
+           
+        }
+         
 
 
-       
+
+
+
+
     }
 }
