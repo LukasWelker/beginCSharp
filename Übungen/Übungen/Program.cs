@@ -11,34 +11,42 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello how many houses you would like to add?");
-            int amount = Convert.ToInt32(Console.ReadLine());
-            List<Haus> Haeuser = new List<Haus>();
-            double QM = 0;
-            for(int i = 0; i < amount; i++)
+            Dreieck1 d = new Dreieck1(2,4, 10);
+        
+
+            //datentyp und Name
+
+            Circle c = new Circle(5);
+            
+
+            Rechteck r = new Rechteck(10,20);
+          
+          
+
+            List<IGeometry> geometries = new List<IGeometry>();
+            geometries.Add(d);
+            geometries.Add(c);
+            geometries.Add(r);
+
+            foreach (IGeometry g in geometries)
             {
-                Haeuser.Add(Haus.AskForUsersHouse());
+                Console.WriteLine($"Mein {g.GetType().Name} hat eine Fläche von {g.Flaeche()} und den Umfang von {g.Umfang()}");
+            }
+            List<Vehicle> fahrzeuge = new List<Vehicle>();
+            fahrzeuge.Add(new Motorcycle(523, "BMW", "GXSR 2000", "3.0", 3000, "Blau",2));
+            fahrzeuge.Add(new Cars(123, "VW ", "Golf 5", "2.0 TDI", 1900, "Rot", 4));
+
+            foreach (Vehicle v in fahrzeuge)
+            {
+                v.Starten();
+                v.Beschleunigen();
+                v.Bremsen();
+                v.Starten();
+                v.Bremsen();
+                v.Bremsen();
             }
 
-            foreach (Haus haus in Haeuser)
-            {
-                haus.PrintHausInformation();
-                double summe1 = haus.Hauswohnfläche();
-                double summe2 = haus.GründstückQM();
-                Console.WriteLine($"Deine Hausfläche beträgt {summe1}");
-                Console.WriteLine($"Deine Grundstückfläche beträgt {summe2}");
-                QM = summe1 + summe2;
-                Console.WriteLine($"Deine gesamte Gründtsückfläche beträgt {QM}");
-            }
-
-            
-
-            
-            
-            
-
-            
-           Console.ReadLine();
+            Console.ReadLine();
 
         }
 
