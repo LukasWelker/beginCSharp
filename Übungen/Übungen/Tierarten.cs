@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Übungen
 {
+    //Vererbungen sind gedacht um Properties zu verrerben keine Methoden
     public abstract class Tierarten
     {
         //Properties
