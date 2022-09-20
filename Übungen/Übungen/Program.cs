@@ -12,56 +12,36 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hallo lieber User wie ist dein Name?");
-            string name =  Console.ReadLine();
-            while (name == string.Empty)
-            {
-                Console.WriteLine("Warum ignoriest du mich wie ist dein Name?");
-                name = Console.ReadLine();
-               
-            }
-            Console.WriteLine($"Nett dich kennenzulernen {name} !");
-
+            Console.WriteLine("Hallo User wie viele Einträge möchtest du in dein INT-Array machen");
+            int Einträge = Convert.ToInt32(Console.ReadLine());
+            float[] zahlen = new float [Einträge];
             int i = 0;
-            int count = 0;
-            while (i < name.Count())
-            {
-                //Überprüfen ob ein a vorhanden ist
-                //Kann vielseiteig verwendet werden!
-                if (name[i] == 'a')
-                {
-                    Console.WriteLine("A ist vorhanden");
-                    count++;
-                }
-                i++;
-            }
-           
-            Console.WriteLine($"so oft ist der Buchstabe a in ihrem Namen vorhanden: {count} Mal !");
-
-            Console.WriteLine();
-
-            Console.WriteLine("Gebe mir nun noch bitte 2 Zahlen ein, erstmal nur die erste!");
-            int zahl1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Vielen Dank für die erste Zahl gebe mir nun bitte noch die 2. Zahl ein");
-            int zahl2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Möchtest du die größere Zahl wissen (y/n)");
-            string answer = Console.ReadLine();
+            Console.WriteLine("Vielen Dank für die Angabe, ihr Array wurde erstellt");
             
-            while (answer == "y")
-                do
+            for (i = 0; i < Einträge; i++)
+            {
+                Console.WriteLine("Geben sie nun bitte die Fließkommazahlen, die sie hinzufügen möchten");
+                zahlen[i] = float.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Möchten sie nun ihre Einträge in Form einer Liste aufgezählt bekommen (y/n)");
+            string answer = Console.ReadLine(); 
+            if (answer == "y")
+            {
+                for (i = 0; i < Einträge; i++)
                 {
-                    Console.WriteLine(Math.Max(zahl1, zahl2));
-                    break;
-                } 
-                while (answer == "n");
-                {
-                Console.WriteLine($"Pech gehabt das ist deine größere Zahl {Math.Max(zahl1, zahl2)}");
+                    Console.WriteLine(zahlen[i]);
                 }
-                    
-               
-                
-               
+
+            }
+            else
+            {
+                Console.WriteLine("Pech gehabt");
+                for(i = 0; i < Einträge; i++)
+                {
+                    Console.WriteLine(zahlen[i]);
+                }
+
+            }
 
             Console.ReadLine();
 
