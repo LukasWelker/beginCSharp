@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
+
 
 namespace Übungen
 {
@@ -12,21 +15,57 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hallo User wie viele Einträge möchtest du in dein INT-Array machen");
-            int Einträge = Convert.ToInt32(Console.ReadLine());
-            float[] zahlen = new float [Einträge];
-            int i = 0;
-            Console.WriteLine("Vielen Dank für die Angabe, ihr Array wurde erstellt");
-            
-            for (i = 0; i < Einträge; i++)
+            //FileInfo fi = new FileInfo("T:/WKH_EXC/Trash/cbec/BMI-data.csv");
+
+            ////fi.CopyTo("C:/Projects001/beginCSharp/MeineDatei13");
+            ////FileInfo fi_neu = new FileInfo("C:/Projects001/beginCSharp/MeineDatei13");
+            ////fi_neu.Delete();
+            //Console.WriteLine("Gebe mir den Pfad an wohin die Datei vershcieben werden soll");
+            //string path =  Console.ReadLine();
+            //path = path.Replace("\\, "\\\\";
+            //DirectoryInfo di = new DirectoryInfo(path);
+            //while (di.Exists == false)
+            //{
+            //    Console.WriteLine("Dein Pfad existiert nicht gib mir einen neuen!");
+            //    path = Console.ReadLine();
+            //    di = new DirectoryInfo(path);
+            //}
+            //Console.WriteLine("Wie soll die Datei heißen?");
+            //string fileName = Console.ReadLine();
+
+            //fi.CopyTo(path +"\\"+ fileName);
+            //FileInfo fi = new FileInfo("T:/WKH_EXC/Trash/cbec/BMI-data.csv");
+
+            //if (fi.Exists)
+            //{
+            //    //Execute only if File exists
+            //}
+
+            string path = @"C:\Projects001Batei123";
+            StreamReader sr = new StreamReader(path);
+            //legiert unseere bool Wert das !
+            List<string[]> einträge = new List<string[]>();
+            //Remove Header
+            sr.ReadLine();
+            while(!sr.EndOfStream)
             {
-                Console.WriteLine("Geben sie nun bitte die Fließkommazahlen, die sie hinzufügen möchten");
-                zahlen[i] = float.Parse(Console.ReadLine());
+                einträge.Add(sr.ReadLine().Split(';'));
             }
-            
-           foreach (float x in zahlen)
+
+            using (StreamWriter writer = new StreamWriter(@"C:\Projects001\beginCSharp\JungeHuepfer.csv"))
             {
-                Console.WriteLine(x);
+                for (int i = 0; i < einträge.Count; i++)
+                {
+                    if (Convert.ToInt32(einträge[i][2]) < 20 && einträge[i][0] == "m")
+                    {
+                        //\t bedeutet Tabulator
+                        writer.WriteLine(string.Join(";", einträge[i]));
+                        Console.WriteLine(string.Join("\t", einträge[i]));
+                    }
+                    //string.Join gibt einen string zurück Liste aus Parametern kann man zsm kleben
+
+                }
+
             }
             
             Console.ReadLine();
