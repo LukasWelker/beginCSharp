@@ -23,26 +23,12 @@ namespace Übungen
                 Console.WriteLine("Geben sie nun bitte die Fließkommazahlen, die sie hinzufügen möchten");
                 zahlen[i] = float.Parse(Console.ReadLine());
             }
-            Console.WriteLine("Möchten sie nun ihre Einträge in Form einer Liste aufgezählt bekommen (y/n)");
-            string answer = Console.ReadLine(); 
-            if (answer == "y")
+            
+           foreach (float x in zahlen)
             {
-                for (i = 0; i < Einträge; i++)
-                {
-                    Console.WriteLine(zahlen[i]);
-                }
-
+                Console.WriteLine(x);
             }
-            else
-            {
-                Console.WriteLine("Pech gehabt");
-                for(i = 0; i < Einträge; i++)
-                {
-                    Console.WriteLine(zahlen[i]);
-                }
-
-            }
-
+            
             Console.ReadLine();
 
         }
