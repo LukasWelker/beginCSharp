@@ -51,12 +51,12 @@ namespace Übungen
             {
                 einträge.Add(sr.ReadLine().Split(';'));
             }
-
-            using (StreamWriter writer = new StreamWriter(@"C:\Projects001\beginCSharp\JungeHuepfer.csv"))
+            for (int alter = 18; alter < 101; alter++)
+            using (StreamWriter writer = new StreamWriter($@"C:\Projects001\beginCSharp\gewicht_{alter}.csv"))
             {
                 for (int i = 0; i < einträge.Count; i++)
                 {
-                    if (Convert.ToInt32(einträge[i][2]) < 20 && einträge[i][0] == "m")
+                    if (Convert.ToInt32(einträge[i][2]) == alter )
                     {
                         //\t bedeutet Tabulator
                         writer.WriteLine(string.Join(";", einträge[i]));
