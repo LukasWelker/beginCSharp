@@ -17,66 +17,21 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-                Console.WriteLine("Hallo, geb mir bitte deine erste Zahl an!");
-                float zahl1 = float.Parse(Console.ReadLine());
-                Console.WriteLine("Vielen Dank geb mir nun bitte deine zweite Zahl an!");
-                float zahl2 = float.Parse(Console.ReadLine());
-                Console.WriteLine("Jetzt fehlt nur noch der Rechenoperator!");
-                string operators = Console.ReadLine();
-                float result = 0;
-                switch (operators)
-                {
-                    case "+":
-                        result = Add(zahl1, zahl2);
-                        break;
-                    case "-":
-                        result = Subtrahieren(zahl1, zahl2);
-                        break;
-                    case "/":
-                        result = Division(zahl1, zahl2);
-                        break;
-                    case "*":
-                        result = Multiply(zahl1, zahl2);
-                        break;
-                    default:
-                        Console.WriteLine("Parameter gibt es nicht!");
-                        break;
-
-
-                }
-                Console.WriteLine($"Das Ergebnis ist {result}");
-                Console.ReadLine();
-            }
-            
+            //Objekt ertsellt alles was mit new gekenzeichnet ist ist ein Objekt
+            Cars2 Auto = new Cars2(1234, "BMW","M4", "M", "Schwarz",2);
+            //so ruf´t man seine Klasse auf
+            Auto.BeschleunigungUm(120);
+            Auto.BremsenUm(120);
+            Console.WriteLine(Auto.ToString());
+            Auto.Lackierung();
+            Console.WriteLine(Auto.ToString());
+            Console.ReadLine();
+            Auto.Bremsen();
         }
-
-
-
-            static float Add(float zahl1, float zahl2)
-            {
-                float ergebnis = zahl1 + zahl2;
-                return ergebnis;
-            }
-            static float Subtrahieren(float zahl1, float zahl2)
-            {
-                float ergebnis = zahl1 - zahl2;
-                return ergebnis;
-            }
-            static float Multiply(float zahl1, float zahl2)
-            {
-                float ergebnis = zahl1 * zahl2;
-                return ergebnis;
-            }
-            static float Division(float zahl1, float zahl2)
-            {
-                float ergebnis = zahl1 / zahl2;
-                return ergebnis;
-            }
-        }
+        
 
 
     }
+}
 
 

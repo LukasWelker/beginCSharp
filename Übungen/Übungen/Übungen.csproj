@@ -43,12 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cars2.cs" />
     <Compile Include="Haus.cs" />
     <Compile Include="Cars.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="Dreieck1.cs" />
     <Compile Include="Geometry.cs" />
     <Compile Include="Motorcycle.cs" />
+    <Compile Include="Motorcycle2.cs" />
     <Compile Include="owl.cs" />
     <Compile Include="Penguin.cs" />
     <Compile Include="Program.cs" />
