@@ -28,8 +28,8 @@ namespace Übungen
             int ergebnis = 0;
             foreach (int zahleneintrag in zahleneinträge)
             {
-                ergebnis = zahleneintrag + ergebnis;
-                return ergebnis;
+                ergebnis = zahleneintrag+ ergebnis;
+                
             }
             return ergebnis;
         }
