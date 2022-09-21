@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -15,46 +16,24 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
-            List<string> allTrainees = new List<string>() { "Lukas", "Philipp", "Mona" };
-            List<string> filteredTrainees = TraineesEndWithN(allTrainees);
-            foreach (string trainee in filteredTrainees)
-            {
-                Console.WriteLine(trainee); 
-                Console.ReadLine();
-            }
+            Console.WriteLine("Gebe mir Zhal 1");
+            int zahl1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Gebe mir eine Zahl2");
+            int zahl2 = Convert.ToInt32(Console.ReadLine());
+            int ergebnis = AddierteZahlen(zahl1, zahl2);
+            Console.WriteLine(ergebnis);
             Console.ReadLine();
+            
         }
-        //static List<string> GiveMeNamesWithM(List<string> allTrainees)
-        //{
-        //    List<string> traineeswithm= new List<string>();
-        //    //Datentyp      Variablenname //in operator Ausgangsvariable
-        //    foreach (string trainee in allTrainees)
-        //    {
-        //        if (trainee.ToLower().StartsWith("m"))
-        //        {
-        //            traineeswithm.Add(trainee);
 
-        //        }
-                
-
-        //    }
-        //    return traineeswithm;
-        //}
-        static List<string> TraineesEndWithN(List <string> allTrainees)
+        static int AddierteZahlen(int zahl1, int zahl2)
         {
-        List<string> traineesendwithn = new List<string>();
-            foreach (string trainee in allTrainees)
-            {
-                if (trainee.EndsWith("N"))
-                {
-                    allTrainees.Add(trainee);
-                }
-            }
-        return traineesendwithn;
+            int sum = zahl1 + zahl2;
+            return sum;
         }
-
     }
+   
 
 }
 
