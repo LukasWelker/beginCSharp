@@ -17,23 +17,24 @@ namespace Übungen
     {
         static void Main(string[] args)
         {
-            string zahltext1 = "34";
-            string zahltext2 = "45";
-            int ergebins = AddierteZahlen(zahltext1, zahltext2);
-            Console.WriteLine(ergebins);
+            int[] zahleneinträge = new int[] { 32, 12, 34, 45 };
+            int wahresergebnis = SummeAusEinträgen(zahleneinträge);
+            Console.WriteLine(wahresergebnis);
             Console.ReadLine();
         }
 
-        static int AddierteZahlen(string zahltext1, string zahltext2)
+        static int SummeAusEinträgen(int[] zahleneinträge)
         {
-           int zahl1 = Convert.ToInt32(zahltext1);
-           int zahl2 = Convert.ToInt32(zahltext2);
-            int sum = zahl1 + zahl2;
-            return sum;
-            
+            int ergebnis = 0;
+            foreach (int zahleneintrag in zahleneinträge)
+            {
+                ergebnis = zahleneintrag + ergebnis;
+                return ergebnis;
+            }
+            return ergebnis;
         }
     }
-   
+ 
 
 }
 
