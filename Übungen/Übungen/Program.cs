@@ -27,21 +27,18 @@ namespace Übungen
             Quader qu = new Quader(4, 5, 4);
             Pyramide p = new Pyramide(6, 5, 4.5);
 
-            List <Geometrie2> geometries2 = new List<Geometrie2>() { r, q, k, dr};
+            List <object> geometries2 = new List<object>() { r, q, k, dr, qu, p};
            
 
-            List<GeometrieDreiDiemensionalcs> geometriesDreiDimensional = new List<GeometrieDreiDiemensionalcs>() { qu, p};
+            
             
 
-            foreach (Geometrie2 g in geometries2)
+            foreach (object g in geometries2)
             {
                 Console.WriteLine(g.ToString()); 
             }
             Console.WriteLine(" ");
-            foreach (GeometrieDreiDiemensionalcs g in geometriesDreiDimensional)
-            {
-                Console.WriteLine(g.ToString());
-            }
+           
             Console.ReadLine();
         }
     }
